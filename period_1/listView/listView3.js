@@ -64,7 +64,7 @@ export default class welcome extends Component{
         refreshControl={  
           <RefreshControl  
            refreshing={this.state.isRefreshing}  
-            onRefresh={this._onRefresh}  
+            onRefresh={this._onRefresh.bind(this)}  
             colors={['#ff0000', '#00ff00','#0000ff','#3ad564']}  
            progressBackgroundColor="#ffffff"  
           />  
@@ -94,6 +94,7 @@ export default class welcome extends Component{
         rowData: rowData,  
       });  
     }, 5000);  
-  } 
+  }
+
 }
 
