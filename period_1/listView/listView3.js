@@ -54,7 +54,37 @@ export default class welcome extends Component{
     };
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log("shouldComponentUpdate");
+    return true;
+  }
+
+  componentWillMount() {
+      console.log("componentWillMount");
+  }
+
+  componentDidMount() {
+    console.log("componentDidMount");
+  }
+
+  componentWillReceiveProps(nextProps) {
+    console.log('componentWillReceiveProps');
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    console.log('componentWillUpdate');
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('componentDidUpdate');
+  }
+
+  componentWillUnmount() {
+     console.log('componentWillUnmount');
+  }
+
   render(){  
+     console.log("render");
     const rows = this.state.rowData.map((row,ii) => {  
       return <Row key={ii} data={row}/>;  
     });  
@@ -75,12 +105,13 @@ export default class welcome extends Component{
   }
 
   _onRefresh() {
-    
+    console.log(11111);
     this.setState({
       isRefreshing:true
     });
-
-    setTimeout(() => {  
+    console.log(22222);
+    setTimeout(() => {
+      console.log(33333);  
       // 准备下拉刷新的5条数据  
       const rowData = Array.from(new Array(5))  
       .map((val, i) => ({  
