@@ -64,7 +64,7 @@ export default class welcome extends Component{
         refreshControl={  
           <RefreshControl  
            refreshing={this.state.isRefreshing}  
-            onRefresh={this._onRefresh}  
+            onRefresh={this._onRefresh()}  
             colors={['#ff0000', '#00ff00','#0000ff','#3ad564']}  
            progressBackgroundColor="#ffffff"  
           />  
@@ -75,10 +75,11 @@ export default class welcome extends Component{
   }
 
   _onRefresh() {
-    
+
     this.setState({
       isRefreshing:true
     });
+
 
     setTimeout(() => {  
       // 准备下拉刷新的5条数据  
@@ -94,6 +95,7 @@ export default class welcome extends Component{
         rowData: rowData,  
       });  
     }, 5000);  
-  } 
+  }
+
 }
 
