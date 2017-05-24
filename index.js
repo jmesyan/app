@@ -16,6 +16,8 @@ import {AppRegistry} from 'react-native';
 // import welcome from './period_1/scrollView/listView1';
 // import welcome from './period_1/scrollView/listView2';
 // import welcome from './period_1/listView/listView3';
-import welcome from './period_1/BasicComponent/button';
+// import welcome from './period_1/BasicComponent/button';
+// import welcome from './period_1/BasicComponent/navigator';
+import welcome from './period_1/BasicComponent/back';
 
 AppRegistry.registerComponent('app', () => welcome);
