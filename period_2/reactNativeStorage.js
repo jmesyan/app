@@ -15,8 +15,8 @@ export default class reactNativeStorage extends Component {
 	  }
 	}
 
-	render(){
-		this.setState({txt:"async"})
+	componentDidMount() {
+	  this.setState({txt:"async"})
 		storage.load({
 			key:'testkey',
 			autoSync: true,
@@ -30,6 +30,9 @@ export default class reactNativeStorage extends Component {
 			data = err.message;
 			this.setState({txt:data})
 		});
+	}
+
+	render(){
 		return (
 			<Text>
 			{this.state.txt}
