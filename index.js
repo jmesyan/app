@@ -22,6 +22,8 @@ import {AppRegistry} from 'react-native';
 // import welcome from './period_2/TextInput';
 // import welcome from './period_2/TextInput2';
 // import welcome from './period_2/reactNativeStorage';
-import welcome from './period_2/sqlite';
+// import welcome from './period_2/sqlite';
+// import welcome from './period_2/sqlite2';
+import welcome from './period_2/liteuse';
 
 AppRegistry.registerComponent('app', () => welcome);
